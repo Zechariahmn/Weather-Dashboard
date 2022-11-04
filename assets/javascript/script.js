@@ -1,5 +1,5 @@
 //Set up the API key
-var APIKey="acf653f3a78c775c8cd26496b7d08352";
+let APIKey="acf653f3a78c775c8cd26496b7d08352";
 
 //Declare a variable to store the searched city
 let city="";
@@ -23,4 +23,13 @@ function find(c){
         }
     }
     return 1;
+}
+
+// Display the curent and future weather to the user after grabing the city form the input text box.
+function displayWeather(event){
+    event.preventDefault();
+    if(searchCity.val().trim()!==""){
+        city=searchCity.val().trim();
+        currentWeather(city);
+    }
 }
