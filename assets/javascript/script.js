@@ -1,3 +1,6 @@
+//Set up the API key
+var APIKey="acf653f3a78c775c8cd26496b7d08352";
+
 //Declare a variable to store the searched city
 let city="";
 
