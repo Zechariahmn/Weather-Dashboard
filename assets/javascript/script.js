@@ -11,3 +11,13 @@ let currentHumidty= $("#humidity");
 let currentWSpeed=$("#wind-speed");
 let currentUvindex= $("#uv-index");
 let sCity=[];
+
+// searches the city to see if it exists in the entries from the storage
+function find(c){
+    for (let i=0; i<sCity.length; i++){
+        if(c.toUpperCase()===sCity[i]){
+            return -1;
+        }
+    }
+    return 1;
+}
