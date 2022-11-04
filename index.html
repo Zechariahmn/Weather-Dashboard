@@ -17,36 +17,23 @@
         <h1> <strong>Weather Dashboard</strong></h1>
     </div>
 
-        <div class="container">
-            <!--Row for searching a city-->
-            <div class="row">
-                <div class="col-sm-4 bg-light">
-                    <!--Here we create an HTML form for handling the inputs-->
-                    <h4 class="pt-1"><strong>Search for a City:</strong></h4>
-                    <!--Here we create the text box for capturing the search city Name-->
-                <div class="input-group mb-3">
-                    <input type="text" class="form-control"id="search-city" aria-label="City Search" aria-describedby="search-button">
-                    <div class="input-group-append">
-                        <button class=" btn bg-primary text-light" id="search-button"><i class="fa fa-search"></i></button>
-                    </div>
-                </div>
-
-                <!--section for search city history-->
-                <button class=" btn btn-primary" type="button" id="clear-history">Clear history</button>
-                <ul class="list-group"></ul>
-            </div> 
-
-                    <!--Html text for the current/main day card-->
-                    <div class="col-sm-8">
-                        <div class="row ml-2 border border-dark rounded">
-                            <div class="col-sm-12" id="current-weather">
-                                <h3 class="city-name mb-1 mt-2 bolder" id="current-city"></h3>
-                                <p>Temperature:<span class="current" id="temperature"></span></p>
-                                <p>Humidity:<span class="current" id="humidity"></span></p> 
-                                <p>Wind Speed:<span class="current" id="wind-speed"></span></p>
-                                <p>UV index:<span class="current bg-danger rounded py-2 px-2 text-white" id="uv-index"></span></p> 
-                            </div>
-                        </div>
+    <main>
+        <div class="input-group col-lg-3 col-md-6 col-sm-9">
+            <h2>Search for a City:</h2>
+            <div>
+                <input type="search" id="city-state" placeholder="City" class="form-control"/>
+                <button data-input="#city-state" type="button" class="submit btn btn-outline-primary">Search</button> <hr> 
+            </div>
+        </div>
+        <div class="weather-display col-lg-9 col-md-6 col-sm-3">
+            <div class="current-city">
+                <h2 class="current-city-date"></h2>
+                <p class="current-weather">current weather</p>
+                <p class="current-temp">Temp:</p>
+                <p class="current-wind">Wind:</p>
+                <p class="current-humidity">Humidity:</p>
+                <p class="current-uv">UV index</p>
+            </div>
 
                         <!--Row for future data to be dumped here-->
                         <div class="col-sm-12" id ="future-weather">

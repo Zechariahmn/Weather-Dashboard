@@ -49,3 +49,5 @@ function currentWeather(city){
         //Data object from server side Api for icon property.
         var weathericon= response.weather[0].icon;
         var iconurl="https://openweathermap.org/img/wn/"+weathericon +"@2x.png";
+
+        
