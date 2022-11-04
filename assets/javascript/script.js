@@ -33,3 +33,15 @@ function displayWeather(event){
         currentWeather(city);
     }
 }
+
+// Here we create the AJAX call
+function currentWeather(city){
+    // Here we build the URL so we can get a data from server side.
+    var queryURL= "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&APPID=" + APIKey;
+    $.ajax({
+        url:queryURL,
+        method:"GET",
+    }).then(function(response){
+
+        // parse the response to display the current weather including the City name. the Date and the weather icon. 
+        console.log(response);
